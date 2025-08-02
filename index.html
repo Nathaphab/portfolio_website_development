@@ -51,7 +51,10 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hello, I'm <span class="highlight">Nathaphab Saila</span></h1>
-            <p class="hero-subtitle">Full Stack Developer</p>
+            <p class="hero-subtitle">
+                <span id="typing-text"></span>
+                <span class="cursor">|</span>
+            </p>
             <p class="hero-description">I create beautiful and functional web applications</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -138,8 +141,17 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">My Projects</h2>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="ui">UI/UX</button>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-category="web">
                     <img src="https://i.pinimg.com/736x/5f/9c/1d/5f9c1d9d15167e0a59e6dad41e8556f9.jpg" alt="Project 1">
                     <div class="project-info">
                         <h3>E-commerce Website</h3>
@@ -150,7 +162,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="mobile">
                     <img src="https://i.pinimg.com/736x/5f/9c/1d/5f9c1d9d15167e0a59e6dad41e8556f9.jpg" alt="Project 2">
                     <div class="project-info">
                         <h3>Task Management App</h3>
@@ -161,7 +173,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="ui">
                     <img src="https://i.pinimg.com/736x/5f/9c/1d/5f9c1d9d15167e0a59e6dad41e8556f9.jpg" alt="Project 3">
                     <div class="project-info">
                         <h3>Weather App</h3>
@@ -219,6 +231,11 @@
             </div>
         </div>
     </section>
+
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
 
     <!-- Footer -->
     <footer class="footer">
